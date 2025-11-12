@@ -6,8 +6,8 @@ import torch
 import torchaudio
 import json
 
-config_file = "configs/config.json"
-checkpoint_file = "ckpts/checkpoints_51.ckpt"
+config_file = "configs/EfficientConformerCTCMedium.json"
+checkpoint_file = "/kaggle/input/ecv-cp-test-check/checkpoints_56_90h_07.ckpt"
 
 wer = WordErrorRate()
 
@@ -34,7 +34,7 @@ def transcriber(wav_path):
     text = model.beam_search_decoding(audio.to(device), x_len=torch.tensor([len(audio[0])], device=device))[0] # you can test with model.gready_search_decoding
     return text
 
-test_wavs_path = glob.glob("data_test/VLSP2023TestPB/*.wav") # => change your folder test dataset here !
+test_wavs_path = glob.glob("/kaggle/input/vivos-vietnamese-speech-corpus-for-asr/vivos/test/waves/*.wav") # => change your folder test dataset here !
 
 with open("data/test_wers_report.txt", "w", encoding="utf8") as fw:
     for wav_path in tqdm(test_wavs_path):
