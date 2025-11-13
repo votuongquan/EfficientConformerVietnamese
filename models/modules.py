@@ -416,8 +416,8 @@ class MultiHeadSelfAttentionModule(nn.Module):
         super(MultiHeadSelfAttentionModule, self).__init__()
 
         # Assert
-        assert not (group_size > 1 and kernel_size is not None), "Local grouped attention not implemented"
-        assert not (group_size > 1 and stride > 1 is not None), "Strided grouped attention not implemented"
+        assert not (group_size > 1 and kernel_size != None), "Local grouped attention not implemented"
+        assert not (group_size > 1 and stride > 1 != None), "Strided grouped attention not implemented"
         assert not (linear_att and relative_pos_enc), "Linear attention requires absolute positional encodings"
 
         # Pre Norm
