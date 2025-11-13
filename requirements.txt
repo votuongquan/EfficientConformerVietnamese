@@ -1,6 +1,6 @@
 tqdm
 sentencepiece
-jiwer<=2.4
+jiwer
 tensorboard
 https://github.com/kpu/kenlm/archive/master.zip
 six
