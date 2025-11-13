@@ -1,6 +1,8 @@
 tqdm
 sentencepiece
 jiwer
+pyctcdecode
+python-Levenshtein
 tensorboard
 https://github.com/kpu/kenlm/archive/master.zip
 six
