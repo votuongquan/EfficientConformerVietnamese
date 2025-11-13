@@ -20,6 +20,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 # Sentencepiece
 import sentencepiece as spm
+from sentencepiece import SentencePieceProcessor
 
 # Schedulers
 from models.schedules import *
